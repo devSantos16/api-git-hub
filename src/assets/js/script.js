@@ -8,6 +8,7 @@ async function generatePopup(){
     const name = document.getElementsByClassName("name-github")[0];
     const location = document.getElementsByClassName("location-github")[0];
     const buttonPopupGithub = document.getElementsByClassName("button-popup-github")[0];
+    const container = document.getElementsByClassName("container")[0];
 
     
     name.innerHTML = object.name;
@@ -20,6 +21,7 @@ async function generatePopup(){
 
     
 
+    container.classList.toggle("visibilitySection");
     popup.classList.toggle("visibilityPopup");
 
 }

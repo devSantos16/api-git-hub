@@ -19,6 +19,7 @@
 
 .left {
     margin-left: 20px;
+    margin-bottom: 10px;
     padding: 5px;
 }
 
@@ -34,6 +35,10 @@
     justify-content: center;
     align-items: center;
     height: 100%;
+}
+
+.visibilitySection {
+    visibility: hidden;
 }
 
 .container {
@@ -88,7 +93,8 @@
     align-items: center;
     visibility: hidden;
     width: 60%;
-    background-color: #0D1117;;
+    background-color: #0D1117;
+    ;
     border-radius: 20px;
     height: 80%;
     position: absolute;
@@ -101,26 +107,26 @@
     visibility: visible;
     -webkit-animation: fadeIn 0.5s;
     animation: fadeIn 0.5s;
-    
+
 }
 
-.image-github{
+.image-github {
     width: 50%;
     border-radius: 80px;
 }
 
-.location-popup{
+.location-popup {
     display: flex;
     gap: 5px;
 }
 
 
-.name-github{
+.name-github {
     margin-top: 50px;
     font-size: 34px;
 }
 
-.section-popup{
+.section-popup {
     display: flex;
     flex-direction: column;
     text-align: justify;
@@ -130,13 +136,13 @@
     height: 80%;
 }
 
-.button-popup{
+.button-popup {
     display: flex;
-    gap: 20px;    
+    gap: 20px;
 }
 
 
-.button-popup{
+.button-popup {
     color: #fff;
 }
 
@@ -174,5 +180,17 @@
         border: 0;
         border-radius: 0;
         height: 100%;
+    }
+
+    .popup {
+        width: 100%;
+        border: 0;
+        border-radius: 0;
+        height: 100%;
+    }   
+}
+@media(max-width: 375px) {
+    .name-github{
+        font-size: 30px;
     }
 }

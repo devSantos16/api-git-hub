@@ -4,7 +4,9 @@ import LocationImage from "../img/location-image.png";
 
 function ClosePopup() {
     const popup = document.getElementsByClassName("popup")[0];
+    const container = document.getElementsByClassName("container")[0];
     popup.classList.toggle("visibilityPopup");
+    container.classList.toggle("visibilitySection");
 }
 
 const Popup = (props) => {

@@ -6,7 +6,6 @@ import Popup from "./assets/components/popup";
 import generatePopup from "./assets/js/script"
 import imageGitHub from "./assets/img/logotipo-do-github.png"
 
-
  class App extends Component {
     constructor(props) {
         super(props);
@@ -18,8 +17,8 @@ import imageGitHub from "./assets/img/logotipo-do-github.png"
                     <img className="img-container" src={imageGitHub} alt="Imagem do GitHub" />
                     <p>Api-GitHub</p>
                     <ContainerItem>
-                        <input className="input-container" id="input-event" type="text" placeholder="Digite o nickname do github"></input>
-                        <button id="button-event" onClick={generatePopup} className="button-container btn btn-success">Procurar</button>
+                        <input className="input-container" id="input-event" type="text" placeholder="Enter github nickname"></input>
+                        <button id="button-event" onClick={generatePopup} className="button-container btn btn-success">Search</button>
                     </ContainerItem>
                 </Container>
                 <Popup>

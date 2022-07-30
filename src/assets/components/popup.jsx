@@ -1,6 +1,8 @@
 import React from "react";
+import GithubImageButton from "../img/github-logo-button.png";
+import LocationImage from "../img/location-image.png";
 
-function closePopup() {
+function ClosePopup() {
     const popup = document.getElementsByClassName("popup")[0];
     popup.classList.toggle("visibilityPopup");
 }
@@ -8,14 +10,20 @@ function closePopup() {
 const Popup = (props) => {
     return (
         <div className="popup">
-            <img className="image-github" alt="Github profile image" />
             <div className="section-popup">
+                <img className="image-github" alt="Github profile image" />
                 <h1 className="name-github"></h1>
-                <p className="username-github"></p>
+                <div className="location-popup">   
+                    <img width= "25" height= "25" src={LocationImage} alt="Image Location"/>
+                    <p className="location-github"></p>
+                </div>
             </div>
-            <div className="github-button-container">
+            <div className="button-popup">
+                <a className="button-popup-github btn btn-light">
+                    <img src={GithubImageButton} width="25" />  Sign In with Github
+                </a>
+                <button onClick={ClosePopup} className="button-popup btn btn-default">Close</button>
             </div>
-            <button onClick={closePopup} className="button-popup btn btn-primary">Fechar</button>
         </div>
 
     );

@@ -1,30 +1,26 @@
 import "./models/token";
 import { token } from "./models/token";
 
-
-
 async function generatePopup(){
     const object = await ShowData();
     const popup = document.getElementsByClassName("popup")[0];
     const image = document.getElementsByClassName("image-github")[0];
     const name = document.getElementsByClassName("name-github")[0];
-    const username = document.getElementsByClassName("username-github")[0];
-    const button = document.createElement("a");
+    const location = document.getElementsByClassName("location-github")[0];
+    const buttonPopupGithub = document.getElementsByClassName("button-popup-github")[0];
 
-
-    button.classList.add("github-button");
-    button.href = object.url;
-
-    button.ariaLabel = `Follow @${object.username} on GitHub`;
-    button.textContent = `Follow ${object.username}`;
-    document.getElementsByClassName("github-button-container")[0].appendChild(button);
-
-    image.src = object.image_github;
+    
     name.innerHTML = object.name;
-    username.innerHTML = object.username;
+    image.src = object.image_github;
+    location.innerHTML = object.location;
+
+    buttonPopupGithub.addEventListener('click',  () =>{
+        window.location.href = object.url;
+    })
+
+    
 
     popup.classList.toggle("visibilityPopup");
-
 
 }
 
@@ -36,21 +32,21 @@ async function ShowData(){
         window.alert(data.message);
     }
     else{
-        let objectData = {
-            username: data.login,
+        const objectData = {
+            location: data.location,
             name: data.name,
             url: data.html_url,
             image_github: data.avatar_url
-            
         }
+        
         return objectData;
     }
 }
 
 async function ResponseUser(input) {
-    let Pessoa = new token(input);
+    let User = new token(input);
     try {
-        const response = await fetch(Pessoa.URL());
+        const response = await fetch(User.URL());
         const data = await response.json();
         return data;
     }

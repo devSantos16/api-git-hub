@@ -1,0 +1,159 @@
+#root {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #0D1117;
+    position: fixed;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    color: #fff;
+}
+
+.left {
+    margin-left: 20px;
+    padding: 5px;
+}
+
+.right {
+    margin-right: 20px;
+    padding: 5px;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    background-color: #010409;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    width: 30%;
+    gap: 20px;
+    background-color: #0D1117;
+    border-radius: 20px;
+    border: 1px solid #fff;
+    color: gray;
+}
+
+.img-container {
+    width: 100px;
+    height: auto;
+}
+
+.container-section {
+    display: flex;
+    flex-direction: column;
+    flex-direction: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.input-container {
+    align-self: center;
+    padding: 15px;
+    width: 80%;
+    height: auto;
+    background-color: rgba(27, 31, 35, 0.04);
+    border: 2px solid gray;
+    border-radius: 20px;
+    color: white;
+    font-size: 16px;
+    text-align: justify;
+}
+
+.button-container {
+    align-self: center;
+    width: 40%;
+}
+
+.popup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    width: 60%;
+    background-color: #0D1117;;
+    border-radius: 20px;
+    height: 80%;
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    gap: 20px;
+}
+
+.visibilityPopup {
+    visibility: visible;
+    -webkit-animation: fadeIn 0.5s;
+    animation: fadeIn 0.5s;
+    
+}
+
+.image-github{
+    width: 20%;
+    border-radius: 80px;
+}
+
+.name-github{
+    font-size: 24px;
+}
+
+.section-popup{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    margin-top: 20px;
+}
+
+.button-popup{
+    position: absolute;
+    bottom: 20px;
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+@media(max-width: 1366px) {
+    .container {
+        width: 40%;
+    }
+}
+
+@media(max-width: 810px) {
+    .container {
+        width: 100%;
+        border: 0;
+        border-radius: 0;
+        height: 100%;
+    }
+}
